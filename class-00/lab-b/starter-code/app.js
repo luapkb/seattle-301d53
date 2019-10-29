@@ -204,4 +204,4 @@ console.log(joe.scopeArrow());
     // we are takling about the same instance of windiow object
 //
 // 3. Explain why "this" is different when an arrow function is used.
-//  "this" is not limited in scope to the constructor when fat arrow is usede 
+//  "this" is not limited in scope to the constructor.  "this" becomes global
