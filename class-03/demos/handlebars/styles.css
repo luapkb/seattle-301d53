@@ -4,6 +4,10 @@ body {
   font-family: helvetica;
 }
 
+.template {
+  display:none;
+}
+
 header {
   position: fixed;
   top: 0;
