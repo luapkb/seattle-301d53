@@ -9,8 +9,8 @@ Following lecture, we will deploy our portfolio app, workshop style. Each studen
 ## Daily Plan
 
 - Warm-up exercise
-- Review code challenges
 - Introduction of today's code challenge topic
+- Build City Explorer (HTML, CSS, JS, jQuery, Handlebars)
 - Deployment Overview and Demo
 - Deployment Workshop
 - Lab Preview
@@ -22,3 +22,30 @@ As a result of completing lecture 5 of Code 301, students will:
 - Understand deployment processes over multiple environments
 - Be able to deploy dynamic web applications to Heroku
 
+### Deployment Workshop
+
+Today, we will be deploying your portfolio to a real web server. This will require a carefully stepped process:
+
+- [ ] Create a new repository for your server at github
+- [ ] Develop and test your server from your machine
+  - /data route that sends JSON data
+  - Static files served from `/public`
+  - Simple 'hello world' `index.html` in public
+- [ ] Check in your server code to github (master branch)
+- [ ] Create an account at Heroku.com
+- [ ] Create a new "app" from your Heroku Dashboard
+  - Heroku GUI: Add App
+  - Heroku CLI: heroku create *app-name*
+- [ ] Deploy your app from your github repository
+  - Heroku GUI: Deploy Tab
+  - Heroku CLI: git push heroku master
+- [ ] Confirm app is live!
+- [ ] Connect your app to master
+  - Heroku GUI: Deployment Tab
+- [ ] Move actual website content to the `public` folder
+- [ ] Check in your server code to github (master branch)
+- [ ] View Heroku logs
+  - Heroku GUI: Activity Tab 
+  - Heroku CLI: heroku logs --app=*app-name*
+- [ ] Confirm app with actual content is live
+- [ ] Win.
