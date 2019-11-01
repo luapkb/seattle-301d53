@@ -1,0 +1,43 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding:0;
+}
+
+h1 {
+  margin:0;
+  padding:0;
+}
+header {
+  background: #111;
+  height: 100px;
+}
+footer {
+  background: #ccc;
+  height: 75px;
+}
+
+main {
+  background: pink;
+  display:grid;
+  grid-template-columns: 150px 1fr 150px;
+  height: calc(100% - 175px);
+}
+
+.content {
+  background: yellow;
+  order: 2;
+  display:grid;
+
+}
+
+aside {
+  order: 1;
+}
+
+nav {
+  order: 3;
+}
