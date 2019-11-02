@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text-x/handlebars-template" id="weather-results-template">
+      <li>
+        The forecast for {{time}} is: {{forecast}}
+      </li>
+    </script>
+  </head>
+  <body>
+    <header><h1>City Explorer</h1></header>
+    <main>
+      <form>
+        <label><input type="text" id="city"></label>
+        <input type="submit" value="Explore!" />
+      </form>
+      <figure>
+        <img src="" />
+        <figcaption>My Map</figcaption>
+      </figure>
+      <section>
+        <ul id="weather-items"></ul>
+      </section>
+    </main>
+    <footer>&copy; 2019 301d53</footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
