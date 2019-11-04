@@ -5,7 +5,7 @@
 ![Money](https://i.giphy.com/media/VTxmwaCEwSlZm/200.gif)
 
 ## Reality
-![Whirlwind](https://i.gifer.com/AilN.gif)
+![Whirlwind](https://media2.giphy.com/media/1434P7rA5rWHiU/giphy.gif)
 
 
 ## What Went Well
