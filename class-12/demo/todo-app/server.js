@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const express = require('express');
 const pg = require('pg');
+const methodOverride = require('method-override');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,11 +18,38 @@ client.on('error', err => console.error(err));
 
 app.set('view engine', 'ejs');
 
+app.use(methodOverride((request, response) => {
+  if(request.body && typeof request.body === 'object' && '_method' in request.body){
+    let method = request.body._method;
+    delete request.body._method;
+    return method;
+  }
+}))
+
 // API Routes
 app.get('/', getTasks) // get all tasks
 app.get('/tasks/:task_id', getOneTask); // get a single task
 app.get('/add', showForm); // show form to add a task
 app.post('/add', addTask); // create a new task
+app.put('/update/:task_id', updateTask);
+// /update/${task.id}
+
+function updateTask(request, response){
+  // response.send(request.body);
+  let {title, description, category, contact, status} = request.body;
+
+  let sql = 'UPDATE tasks SET title=$1, description=$2, category=$3, contact=$4, status=$5 WHERE id=$6;';
+
+  let safeValue=[title, description, category, contact, status, request.params.task_id];
+
+  client.query(sql, safeValue)
+    .then(res => {
+      response.redirect(`/tasks/${request.params.task_id}`);
+    })
+  // collect info from the form
+  // update the DB
+  // redirect to the detail page with new values
+}
 
 function getTasks(req, res) {
   let SQL = 'SELECT * FROM tasks;';
